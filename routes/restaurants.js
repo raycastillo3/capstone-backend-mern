@@ -13,14 +13,5 @@ router.get("/", async (req, res) => {
     }
 })
 
-router.get("/:id", async (req, res) => {
-    try {
-        const result = await Restaurant.findById(req.params.id); 
-        if (!result) res.status(404).send("Not found");
-        res.status(200).send(result);
-    } catch (err) {
-        console.log(err);
-    }
-})
 
 module.exports = router;

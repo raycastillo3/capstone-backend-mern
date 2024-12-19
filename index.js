@@ -6,7 +6,6 @@ const restaurant = require("./routes/restaurants");
 const cors = require('cors');
 
 
-
 app.use(cors({origin: true, credentials: true}));
 app.use(express.json())
 app.use("/restaurants", restaurant);
